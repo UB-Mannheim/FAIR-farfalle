@@ -17,3 +17,9 @@ search:
   formats:
     - html
     - json
+
+engines:
+  - name: pinterest
+    engine: pinterest
+    shortcut: pin
+    disabled: true
