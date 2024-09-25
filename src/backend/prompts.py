@@ -98,7 +98,7 @@ Example Query Plan:
 ]
 
 Query: {query}
-Query Plan (with a final summarize/combine/compare step):
+Query Plan (with a final summarize/combine/compare step in valid JSON format):
 """
 
 SEARCH_QUERY_PROMPT = """\
