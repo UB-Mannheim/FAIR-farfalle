@@ -18,7 +18,7 @@ const NewChatButton = () => {
 };
 
 const TextLogo = () => {
-  return <div className="text-2xl font-medium">farfalle</div>;
+  return <div className="text-2xl font-medium">FAIR-farfalle</div>;
 };
 
 export function Navbar() {

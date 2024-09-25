@@ -18,7 +18,7 @@ const InputBar = ({
       <div className="w-full">
         <TextareaAutosize
           className="w-full bg-transparent text-md resize-none focus:outline-none p-2"
-          placeholder="Ask anything..."
+          placeholder="ask about research data management"
           onChange={(e) => setInput(e.target.value)}
           value={input}
         />
