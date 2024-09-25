@@ -11,5 +11,4 @@ async def generate_related_queries(
     related = llm.structured_complete(
         RelatedQueries, RELATED_QUESTION_PROMPT.format(query=query, context=context)
     )
-
-    return [query.lower().replace("?", "") for query in related.related_questions]
+    return [query.lower().replace("?", "") for query in related.related_questions if query]
