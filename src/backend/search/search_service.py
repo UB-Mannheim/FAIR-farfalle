@@ -14,7 +14,9 @@ from backend.search.providers.tavily import TavilySearchProvider
 
 load_dotenv()
 
-
+global_context = os.getenv("GLOBAL_CONTEXT")
+if not global_context:
+    global_context = ""
 redis_url = os.getenv("REDIS_URL")
 redis_client = redis.Redis.from_url(redis_url) if redis_url else None
 
@@ -91,7 +93,7 @@ async def perform_search(query: str) -> SearchResponse:
             cached_json = json.loads(json.loads(cached_results.decode("utf-8")))  # type: ignore
             return SearchResponse(**cached_json)
 
-        results = await search_provider.search(query)
+        results = await search_provider.search(query + ' ' + global_context)
 
         if redis_client:
             redis_client.set(cache_key, json.dumps(results.model_dump_json()), ex=7200)
