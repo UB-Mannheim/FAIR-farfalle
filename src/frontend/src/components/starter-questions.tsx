@@ -1,10 +1,12 @@
 import { ArrowUpRight } from "lucide-react";
 
 const starterQuestions = [
-  "what is farfalle?",
-  "openai scarlett johansson?",
-  "what is groq?",
-  "what happened to ilya?",
+  "what is RDM?",
+  "DMP templates",
+  "FAIR principles",
+  "data and code availability statements",
+  "RDM in a research project proposal",
+  "how to cite a dataset?",
 ];
 
 export const StarterQuestionsList = ({
