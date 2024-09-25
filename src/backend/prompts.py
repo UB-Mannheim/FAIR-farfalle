@@ -39,7 +39,7 @@ Original Question: {query}
 </context>
 
 Output:
-related_questions: A list of EXACTLY three concise, simple follow-up questions
+related_questions: A list of EXACTLY three concise, simple follow-up questions in valid JSON format
 """
 
 HISTORY_QUERY_REPHRASE = """
